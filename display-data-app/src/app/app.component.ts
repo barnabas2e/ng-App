@@ -1,3 +1,4 @@
+import { Hero } from './hero';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'display-data-app';
+  title: string;
+  heroes: string[];
+  myHero: string[];
+
+  constructor() {
+    this.title = 'Tour of Heroes';
+    //this.heroes = ['Superman', 'Ironman', 'Windstorm', 'Tornado'];
+    this.heroes = [
+      new Hero(1, 'Ironman'),
+      new Hero(2, 'Superman'),
+      new Hero(3, 'Batman'),
+      new Hero(4, 'Windstorm')
+    ];
+    this.myHero = this.heroes[0];
+  }
 }

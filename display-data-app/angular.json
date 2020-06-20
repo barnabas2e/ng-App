@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "display-data-app"
+    }
+  },
+  "defaultProject": "display-data-app",
+  "cli": {
+    "analytics": false
+  }
 }
