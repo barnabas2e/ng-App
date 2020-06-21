@@ -11,6 +11,9 @@ export class AppComponent {
   heroes: string[];
   myHero: string[];
 
+  //display message 
+  clickMeMessage = '';
+
   constructor() {
     this.title = 'Tour of Heroes';
     //this.heroes = ['Superman', 'Ironman', 'Windstorm', 'Tornado'];
@@ -21,5 +24,9 @@ export class AppComponent {
       new Hero(4, 'Windstorm')
     ];
     this.myHero = this.heroes[0];
+  }
+
+  onClickMe() {
+    this.clickMeMessage = 'You are my hero!';
   }
 }
